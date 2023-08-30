@@ -1,0 +1,126 @@
+.about {
+  width: 100%;
+  max-width: 70em;
+  margin: 75px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.home-about-textbox {
+  width: 100vw;
+  margin-left: -2.5%;
+  outline: 2px solid black;
+  color: black;
+  position: relative;
+  background-color: white;
+}
+
+.home-about-textbox h1 {
+  background-color: white;
+  color: #87241a;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0.75em;
+  padding: 0 0.145em;
+}
+
+.home-about-textbox-2 {
+  padding: 4em;
+  width: 100vw;
+  margin-left: -2.5%;
+  outline: 2px solid black;
+  color: black;
+  position: relative;
+  background-color: white;
+}
+
+.home-about-textbox-2 h1 {
+  background-color: white;
+  color: #87241a;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0.75em;
+  padding: 0 0.145em;
+}
+
+@media (min-width: 25rem) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .home-about-textbox {
+    padding: 5.5em;
+  }
+
+  .home-about-textbox h1 {
+    top: 0.6em;
+    padding: 0 0.325em;
+  }
+
+  .home-about-textbox-2 {
+    padding: 5.5em;
+  }
+
+  .home-about-textbox-2 h1 {
+    top: 0.6em;
+    padding: 0 0.325em;
+  }
+}
+
+@media (min-width: 60rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-about {
+    background-image: url(img/meabout.jpg);
+    background-repeat: no-repeat;
+    background-position: right 0% bottom 0%;
+    background-size: contain;
+    height: 380px;
+    padding-bottom: 10em;
+  }
+
+  .home-about-textbox {
+    width: 32.5%;
+    padding: 7em;
+    outline-offset: -3.75em;
+    margin-left: -2.5%;
+    top: 2em;
+    text-align: left;
+  }
+
+  .home-about-textbox h1 {
+    top: 0.75em;
+    left: 6rem;
+    transform: translateX(0);
+  }
+
+  .home-about-2 {
+    background-image: url(img/mirror.jpg);
+    background-repeat: no-repeat;
+    background-position: right 91% bottom 45%;
+    background-size: contain;
+    margin-left: -2.5%;
+    height: 395px;
+    padding-bottom: 10em;
+  }
+
+  .home-about-textbox-2 {
+    width: 32.5%;
+    padding: 7em;
+    outline-offset: -3.75em;
+    margin-left: -12, 2%;
+    top: 2.5em;
+    right: -40em;
+    text-align: right;
+  }
+
+  .home-about-textbox-2 h1 {
+    top: 0.75em;
+    left: 18rem;
+    transform: translateX(0);
+  }
+}

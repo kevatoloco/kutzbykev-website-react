@@ -1,0 +1,55 @@
+.gallery {
+  background-color: #e0e0e0;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+
+.gallery-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-58 {
+  align-items: center;
+  background-color: #d3ae36;
+  border: 2px solid #d3ae36;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  line-height: 13.2px;
+  letter-spacing: 2.04px;
+  margin-top: -20px;
+  min-width: 140px;
+  padding: 0 17px;
+  text-align: center;
+  transition: all 0.3s;
+
+  touch-action: manipulation;
+}
+
+.button-58:focus {
+  color: #171e29;
+}
+
+.button-58:hover {
+  background-color: #a67b00;
+  border-color: #a67b00;
+}
+
+.button-58:active {
+  background-color: #a67b00;
+  border-color: #a67b00;
+}
+
+@media (min-width: 768px) {
+  .button-58 {
+    min-width: 170px;
+  }
+}

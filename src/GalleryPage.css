@@ -1,0 +1,88 @@
+.gallery-page {
+  margin: 0;
+  padding: 0;
+  max-height: fit-content;
+  overflow: hidden;
+}
+
+.gallery-header {
+  height: 70vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 0.25, 0.25)),
+    url(img/clippers2.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+.gallery-header > h1 {
+  position: relative;
+  left: 150px;
+  top: 360px;
+  font-size: 80px;
+}
+.gallery-photos {
+  width: 100%;
+}
+.gallery-row {
+  display: flex;
+}
+.gallery-row > img {
+  object-fit: cover;
+  justify-content: space-evenly;
+  width: 316px;
+  height: 316px;
+}
+
+nav {
+  width: 100%;
+  left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  z-index: 1030;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+nav img {
+  width: 150px;
+  height: 125px;
+  vertical-align: middle;
+}
+
+.nav__links {
+  flex: 1;
+}
+
+.nav__links ul li {
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  color: #fff;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.nav__links ul li a {
+  font-weight: 650;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+}
+
+.nav__links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #e57254;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav__links ul li:hover::after {
+  width: 100%;
+}

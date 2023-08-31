@@ -1,9 +1,9 @@
 import "./GalleryPage.css";
-import logo from "./img/capture.png";
-import { Link } from "react-router-dom";
+import logo from "./img/newlogo.png";
+import { HashLink as Link } from "react-router-hash-link";
 import CuratorWidget from "./CuratorWidget";
-import elliot from "./img/1fade.jpg";
-import andrewyeh from "./img/andrewyeh.jpg";
+import React, { useState } from "react";
+
 import Footer from "./Footer";
 
 function importAll(r) {
@@ -15,44 +15,69 @@ function importAll(r) {
 }
 
 function GalleryPage() {
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 120) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
   const images = importAll(
     require.context("./img", false, /\.(png|jpe?g|svg)$/)
   );
 
   return (
-    <div className="gallery-page">
+    <div className="gallery-page" id="GalleryPage">
       <div class="gallery-header">
         <nav>
-          <div class="nav__links">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-            <ul>
+          <div class={color ? `nav__links nav-bg` : `nav__links`}>
+            <a>
               <Link to="/">
                 <img src={logo} alt="" />
               </Link>
+            </a>
+            <div className="nav-right">
+              <a>
+                <Link smooth to="/">
+                  Home
+                </Link>
+              </a>
+              <a>
+                <Link smooth to="/#about">
+                  About
+                </Link>
+              </a>
 
-              <li>
-                <a href="gallery.html">About</a>
-              </li>
-              <li>
-                <a href="services.html">Services</a>
-              </li>
-              <li>
-                <Link to="/GalleryPage" target="_blank">
+              <a>
+                <Link smooth to="/#services">
+                  Services
+                </Link>
+              </a>
+
+              <a>
+                <Link to="#GalleryPage" target="_blank">
                   Gallery
                 </Link>
-              </li>
-              <li>
+              </a>
+              <a>
+                <Link smooth to="/#contact">
+                  Contact
+                </Link>
+              </a>
+              <a>
                 <Link
+                  className="nav-button"
                   to="https://squareup.com/appointments/book/k2gva624b17ej5/LYSS7VNAD81TC/start"
                   target="_blank"
                 >
-                  <a>Book An Appointment</a>
+                  <p>Book An Appointment</p>
                 </Link>
-              </li>
-            </ul>
+              </a>
+            </div>
           </div>
-          <i class="fa fa-bars" onclick="showMenu()"></i>
-          <i class="fa fa-scissors"></i>
         </nav>
         <h1>GALLERY</h1>
       </div>

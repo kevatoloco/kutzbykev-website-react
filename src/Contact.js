@@ -4,7 +4,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 function Contact() {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div class="row">
         <section class="location">
           <div className="circle-wrapper">

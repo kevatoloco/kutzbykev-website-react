@@ -1,44 +1,74 @@
 import "./Header.css";
 import logo from "./img/newlogo.png";
-import { Link } from "react-router-dom";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import React, { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
+
 function Header() {
+  const [color, setColor] = useState(false);
+
+  const changeColorAndLogo = () => {
+    var Logo = document.getElementById("Logo");
+    if (window.scrollY >= 120) {
+      setColor(true);
+      Logo.style.width = "115px";
+      Logo.style.height = "90px";
+    } else {
+      setColor(false);
+      Logo.style.width = "160px";
+      Logo.style.height = "135px";
+    }
+  };
+  window.addEventListener("scroll", changeColorAndLogo);
   return (
     <>
-      <section class="header">
+      <section class="header" id="home">
         <nav>
-          <div class="nav__links">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-            <ul>
+          <div class={color ? `nav__links nav-bg` : `nav__links`}>
+            <a>
               <Link to="/">
-                <img src={logo} alt="" />
+                <img src={logo} alt="" id="Logo" />
               </Link>
-
-              <li>
-                <a href="gallery.html">About</a>
-              </li>
-              <li>
-                <a href="services.html">Services</a>
-              </li>
-              <li>
+            </a>
+            <div className="nav-right">
+              <a>
+                <Link smooth to="#home">
+                  Home
+                </Link>
+              </a>
+              <a>
+                <Link smooth to="#about">
+                  About
+                </Link>
+              </a>
+              <a>
+                <Link smooth to="#services">
+                  Services
+                </Link>
+              </a>
+              <a>
                 <Link to="/GalleryPage" target="_blank">
                   Gallery
                 </Link>
-              </li>
-              <li>
+              </a>
+              <a>
+                <Link smooth to="#contact">
+                  Contact
+                </Link>
+              </a>
+              <a>
                 <Link
+                  className="nav-button"
                   to="https://squareup.com/appointments/book/k2gva624b17ej5/LYSS7VNAD81TC/start"
                   target="_blank"
                 >
-                  <a>Book An Appointment</a>
+                  <p>Book An Appointment</p>
                 </Link>
-              </li>
-            </ul>
+              </a>
+            </div>
           </div>
-          <i class="fa fa-bars" onclick="showMenu()"></i>
-          <i class="fa fa-scissors"></i>
         </nav>
       </section>
       <div className="info-box">

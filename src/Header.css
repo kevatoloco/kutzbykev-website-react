@@ -39,6 +39,10 @@
   text-transform: uppercase;
   font-size: 15px;
   color: #fff;
+  transition: all linear 0.25s;
+}
+.nav__links a:hover {
+  color: #d3ae36;
 }
 
 .nav-right a p {
@@ -72,6 +76,18 @@
   color: #d3ae36;
 }
 
+.icon-text-book {
+  text-decoration: none;
+}
+.icon-text-book > h3 {
+  transition: all linear 0.25s;
+  color: #d3ae36;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.icon-text-book > h3:hover {
+  color: #a67b00;
+}
 .icon-text > .MuiSvgIcon-root {
   font-size: 30px;
   color: white;

@@ -1,28 +1,27 @@
 .contact {
+  padding-top: 50px;
   background-color: white;
-}
-
-.contact > h1 {
-  text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 70px;
 }
 
 .form > p {
   letter-spacing: 1.02px;
   font-size: 15px;
   padding-bottom: 5px;
+  margin-top: -10px;
 }
 
 .contact-header {
   display: flex;
-  padding-top: 30px;
-  vertical-align: text-bottom;
+
+  align-items: center;
 }
 
 .contact-header > h1 {
   margin-left: -5px;
-  padding-right: 25px;
+  padding-right: 10px;
   color: #87241a;
+  padding-top: 10px;
 }
 
 .contact-header > p {
@@ -40,7 +39,7 @@
 .location {
   width: 45%;
   margin: auto;
-  padding-top: 60px;
+  padding-top: 35px;
 }
 
 .location iframe {
@@ -150,4 +149,32 @@
   .button-58 {
     min-width: 170px;
   }
+}
+
+.contact-icon-link > .MuiSvgIcon-root {
+  text-decoration: none;
+  color: black;
+  transition: all linear 0.25s;
+  cursor: pointer;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-top: 28px;
+}
+
+.contact-icon-link > .MuiSvgIcon-root:hover {
+  color: #d3ae36;
+}
+
+.contact-header > .MuiSvgIcon-root {
+  font-size: 18px;
+  color: black;
+  transition: all linear 0.25s;
+  cursor: pointer;
+  align-items: center;
+  padding-left: 10px;
+  padding-top: 26px;
+}
+
+.contact-header > .MuiSvgIcon-root:hover {
+  color: #d3ae36;
 }

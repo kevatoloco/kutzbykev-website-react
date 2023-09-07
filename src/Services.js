@@ -30,10 +30,18 @@ function Services() {
           <div className="services-left">
             <h1>Services</h1>
             <p>
-              I offer haircuts at $20 each, with appointments lasting 45 minutes
-              to an hour. You'll receive a free, thorough consultation to
-              understand you and your hair better before the haircut.
+              Currently, I offer haircuts with free consultations, priced at $20
+              per session, and appointments usually last 45 minutes to an hour.
+              My approach prioritizes a comprehensive understanding of you and
+              your hair to ensure precision and satisfaction.
             </p>
+            <div className="services-left-arrow">
+              <div className="triangle" />
+
+              <h4>Check out the list of the hairstyles I can do below!</h4>
+              <div className="triangle" />
+            </div>
+
             {/*    <p>Here's a list of hairstyles...</p>
             <div class="box">Mullet</div>
             <div class="box">Crew Cut</div>
@@ -85,7 +93,90 @@ function Services() {
                 <div
                   style={{
                     backgroundImage:
-                      "url(" + require("./img/alvarome.jpg") + ")",
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside1.jpg") +
+                      ")",
+                  }}
+                ></div>
+              </div>
+              <div className="each-slide-effect">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside3.jpg") +
+                      ")",
+                  }}
+                ></div>
+              </div>
+              <div className="each-slide-effect">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside4.jpg") +
+                      ")",
+                  }}
+                ></div>
+              </div>
+              <div className="each-slide-effect">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside5.jpg") +
+                      ")",
+                  }}
+                ></div>
+              </div>
+              <div className="each-slide-effect">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside2.jpg") +
+                      ")",
+                  }}
+                ></div>
+              </div>
+
+              <div className="each-slide-effect">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside7.jpg") +
+                      ")",
+                  }}
+                ></div>
+              </div>
+              <div className="each-slide-effect">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside8.jpg") +
+                      ")",
+                  }}
+                ></div>
+              </div>
+              <div className="each-slide-effect">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside9.jpg") +
+                      ")",
+                  }}
+                ></div>
+              </div>
+              <div className="each-slide-effect">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(" +
+                      require("./img/imgSlideshow/sidebyside10.jpg") +
+                      ")",
                   }}
                 ></div>
               </div>

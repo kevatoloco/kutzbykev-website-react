@@ -3,7 +3,7 @@
   max-width: 70em;
   margin: 75px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .home-about-textbox {
@@ -13,6 +13,8 @@
   color: black;
   position: relative;
   background-color: white;
+  line-height: 30px;
+  letter-spacing: 1px;
 }
 
 .home-about-textbox h1 {
@@ -33,6 +35,8 @@
   color: black;
   position: relative;
   background-color: white;
+  line-height: 25px;
+  letter-spacing: 1px;
 }
 
 .home-about-textbox-2 h1 {
@@ -93,7 +97,7 @@
   }
 
   .home-about-textbox h1 {
-    top: 0.75em;
+    top: 1em;
     left: 6rem;
     transform: translateX(0);
   }
@@ -119,7 +123,7 @@
   }
 
   .home-about-textbox-2 h1 {
-    top: 0.75em;
+    top: 1em;
     left: 18rem;
     transform: translateX(0);
   }

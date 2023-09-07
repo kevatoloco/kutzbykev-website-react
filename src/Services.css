@@ -16,15 +16,35 @@
 
 .services-left > h1 {
   padding-bottom: 20px;
-  font-size: 32px;
+  font-size: 37px;
   line-height: 44px;
   letter-spacing: 4.8px;
   margin-top: 10px;
   color: #d3ae36;
 }
-
-.services-left > h4 {
-  padding-bottom: 25px;
+.services-left-arrow {
+  display: flex;
+  padding-top: 110px;
+  align-items: center;
+  justify-content: center;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 15px solid #d3ae36;
+  border-bottom: 0;
+}
+.services-left-arrow > h4 {
+  color: #d3ae36;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .services-left > p {
   padding-bottom: 15px;
@@ -63,6 +83,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: center;
   width: inherit;
   height: 350px;
 }

@@ -28,7 +28,7 @@ function Header() {
         <nav>
           <div class={color ? `nav__links nav-bg` : `nav__links`}>
             <a>
-              <Link to="/">
+              <Link smooth to="/#home">
                 <img src={logo} alt="" id="Logo" />
               </Link>
             </a>
@@ -78,12 +78,15 @@ function Header() {
         </div>
         <div className="icon-text">
           <EventAvailableIcon />
-          <Link
-            to="https://squareup.com/appointments/book/k2gva624b17ej5/LYSS7VNAD81TC/start"
-            target="_blank"
-          >
-            <h3>BOOK AN APPOINTMENT</h3>
-          </Link>
+          <a>
+            <Link
+              className="icon-text-book"
+              to="https://squareup.com/appointments/book/k2gva624b17ej5/LYSS7VNAD81TC/start"
+              target="_blank"
+            >
+              <h3>BOOK AN APPOINTMENT</h3>
+            </Link>
+          </a>
         </div>
         <div className="icon-text">
           <AttachMoneyIcon />

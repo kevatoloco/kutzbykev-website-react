@@ -16,14 +16,20 @@ function importAll(r) {
 
 function GalleryPage() {
   const [color, setColor] = useState(false);
-  const changeColor = () => {
+
+  const changeColorAndLogo = () => {
+    var Logo = document.getElementById("Logo");
     if (window.scrollY >= 120) {
       setColor(true);
+      Logo.style.width = "115px";
+      Logo.style.height = "90px";
     } else {
       setColor(false);
+      Logo.style.width = "160px";
+      Logo.style.height = "135px";
     }
   };
-  window.addEventListener("scroll", changeColor);
+  window.addEventListener("scroll", changeColorAndLogo);
 
   const images = importAll(
     require.context("./img", false, /\.(png|jpe?g|svg)$/)
@@ -35,8 +41,8 @@ function GalleryPage() {
         <nav>
           <div class={color ? `nav__links nav-bg` : `nav__links`}>
             <a>
-              <Link to="/">
-                <img src={logo} alt="" />
+              <Link smooth to="/#home">
+                <img src={logo} alt="" id="Logo" />
               </Link>
             </a>
             <div className="nav-right">
@@ -58,7 +64,7 @@ function GalleryPage() {
               </a>
 
               <a>
-                <Link to="#GalleryPage" target="_blank">
+                <Link smooth to="#GalleryPage">
                   Gallery
                 </Link>
               </a>

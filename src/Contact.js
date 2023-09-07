@@ -1,8 +1,14 @@
 import "./Contact.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import { HashLink as Link } from "react-router-hash-link";
+import React, { useState } from "react";
 
 function Contact() {
+  const [isEmailShown, setEmailIsShown] = useState(false);
+  const [isPhoneShown, setPhoneIsShown] = useState(false);
   return (
     <div className="contact" id="contact">
       <div class="row">
@@ -23,12 +29,58 @@ function Contact() {
         <div class="contact-col">
           <div className="contact-header">
             <h1>Get In Touch</h1>
-            <InstagramIcon />
-            <MailOutlineIcon />
-            <p>KutzByKevSD@gmail.com</p>
-          </div>
-          <p>714-277-7696</p>
 
+            <Link
+              className="contact-icon-link"
+              smooth
+              to="https://www.instagram.com/kutz_bykev/"
+              target="_blank"
+            >
+              <InstagramIcon />
+            </Link>
+            <Link
+              className="contact-icon-link"
+              smooth
+              to="https://www.facebook.com/profile.php?id=100069703561626"
+              target="_blank"
+            >
+              <FacebookIcon />
+            </Link>
+            <MailOutlineIcon
+              onMouseEnter={() => setEmailIsShown(true)}
+              onMouseLeave={() => setEmailIsShown(false)}
+            />
+
+            <PhoneEnabledIcon
+              onMouseEnter={() => setPhoneIsShown(true)}
+              onMouseLeave={() => setPhoneIsShown(false)}
+            />
+
+            {isEmailShown && (
+              <p
+                style={{
+                  color: "black",
+                  textAlign: "center",
+                  paddingTop: "28px",
+                  paddingLeft: "5px",
+                }}
+              >
+                KutzByKevSD@gmail.com
+              </p>
+            )}
+            {isPhoneShown && (
+              <p
+                style={{
+                  color: "black",
+                  textAlign: "center",
+                  paddingTop: "28px",
+                  paddingLeft: "5px",
+                }}
+              >
+                714-277-7696
+              </p>
+            )}
+          </div>
           <form className="form">
             <p>
               Full Name <span style={{ color: "#790000" }}>*</span>

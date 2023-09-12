@@ -5,12 +5,16 @@ import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function Header() {
   const [color, setColor] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const changeColorAndLogo = () => {
     var Logo = document.getElementById("Logo");
+    var navMenu = document.getElementById("navMenu");
+
     if (window.scrollY >= 120) {
       setColor(true);
       Logo.style.width = "115px";
@@ -19,9 +23,12 @@ function Header() {
       setColor(false);
       Logo.style.width = "160px";
       Logo.style.height = "135px";
+      navMenu.style.top = "159px";
     }
   };
+
   window.addEventListener("scroll", changeColorAndLogo);
+
   return (
     <>
       <section class="header" id="home">
@@ -32,7 +39,10 @@ function Header() {
                 <img src={logo} alt="" id="Logo" />
               </Link>
             </a>
-            <div className="nav-right">
+            <div
+              className={isNavExpanded ? "nav-right expanded " : "nav-right"}
+              id="navMenu"
+            >
               <a>
                 <Link smooth to="#home">
                   Home
@@ -68,6 +78,12 @@ function Header() {
                 </Link>
               </a>
             </div>
+
+            <MenuIcon
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            />
           </div>
         </nav>
       </section>

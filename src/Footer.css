@@ -2,6 +2,7 @@
   background-color: black;
   padding: 30px;
   width: auto;
+  padding-top: 50px;
 }
 
 .footer-icons {
@@ -73,4 +74,23 @@
 
 .footer-text > h3:hover {
   color: #d3ae36;
+}
+
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 12px;
+  }
+  .footer-top {
+    padding-left: 50px;
+  }
+  .footer-middle {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer-middle img {
+    height: 175px;
+  }
+  .footer-bot > p {
+    font-size: 13px;
+  }
 }

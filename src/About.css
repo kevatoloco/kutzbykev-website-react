@@ -50,26 +50,43 @@
 }
 
 @media (min-width: 25rem) {
+  .about {
+    width: auto;
+    margin: 75px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   h1 {
     font-size: 2rem;
   }
 
   .home-about-textbox {
     padding: 5.5em;
+    width: auto;
+    height: auto;
+    margin-left: 2%;
+    text-align: center;
   }
 
   .home-about-textbox h1 {
-    top: 0.6em;
+    top: 0.9em;
     padding: 0 0.325em;
+    padding-top: 10px;
   }
 
   .home-about-textbox-2 {
     padding: 5.5em;
+    width: auto;
+    height: auto;
+    line-height: 25px;
+    margin-left: 2%;
+    text-align: center;
   }
 
   .home-about-textbox-2 h1 {
-    top: 0.6em;
-    padding: 0 0.325em;
+    top: 0.9em;
+    padding: 10px;
   }
 }
 
@@ -120,6 +137,7 @@
     top: 2.5em;
     right: -40em;
     text-align: right;
+    transform: translateX(0);
   }
 
   .home-about-textbox-2 h1 {

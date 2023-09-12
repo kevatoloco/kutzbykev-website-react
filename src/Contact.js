@@ -4,11 +4,41 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { HashLink as Link } from "react-router-hash-link";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [isEmailShown, setEmailIsShown] = useState(false);
   const [isPhoneShown, setPhoneIsShown] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    alert("Form submitted!");
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5hr5qft",
+        "template_g9ofykl",
+        form.current,
+        "xueSdT0dO_CG2NhV8"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setFullName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
     <div className="contact" id="contact">
       <div class="row">
@@ -81,20 +111,41 @@ function Contact() {
               </p>
             )}
           </div>
-          <form className="form">
+
+          <form className="form" ref={form} onSubmit={sendEmail}>
             <p>
               Full Name <span style={{ color: "#790000" }}>*</span>
             </p>
-            <input type="text" name="name" required />
+            <input
+              type="text"
+              name="user_name"
+              onChange={(event) => setFullName(event.target.value)}
+              value={fullName}
+              required
+            />
+
             <p>
               Email Address <span style={{ color: "#790000" }}>*</span>
             </p>
-            <input type="email" name="email" required />
+            <input
+              type="email"
+              name="user_email"
+              onChange={(event) => setEmail(event.target.value)}
+              value={email}
+              required
+            />
             <p>
               Message <span style={{ color: "#790000" }}>*</span>
             </p>
-            <textarea rows="8" name="message" required></textarea>
-            <button type="submit" class="button-58">
+
+            <textarea
+              rows="8"
+              name="message"
+              onChange={(event) => setMessage(event.target.value)}
+              value={message}
+              required
+            />
+            <button type="submit" class="button-58" value="send">
               SEND MESSAGE
             </button>
           </form>

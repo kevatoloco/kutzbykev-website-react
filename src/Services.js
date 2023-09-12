@@ -35,40 +35,6 @@ function Services() {
               My approach prioritizes a comprehensive understanding of you and
               your hair to ensure precision and satisfaction.
             </p>
-            <div className="services-left-arrow">
-              <div className="triangle" />
-
-              <h4>Check out the list of the hairstyles I can do below!</h4>
-              <div className="triangle" />
-            </div>
-
-            {/*    <p>Here's a list of hairstyles...</p>
-            <div class="box">Mullet</div>
-            <div class="box">Crew Cut</div>
-            <div class="box">Pompadour</div>
-            <div class="box">Undercut</div>
-            <div class="box">Buzz Cut</div>
-            <div class="box">Quiff</div>
-            <div class="box">Long Hairstyles</div>
-            <div class="box">Textured Crop</div>
-            <div class="box">Fringe</div>
-            <div class="box">Comb Over</div>
-            <div class="box">Mid Split</div>
-            <div class="box">Slicked Back</div>
-            <div class="box">Side Part</div>
-            <p>
-              alongside with the variations for the side/back that I can do!
-            </p>
-            <div class="box">Low Fade</div>
-            <div class="box">Mid Fade</div>
-            <div class="box">High Fade</div>
-            <div class="box">Drop Fade</div>
-            <div class="box">Burst Fade</div>
-            <div class="box">Low Taper</div>
-            <div class="box">Mid Taper</div>
-            <div class="box">High Taper</div>
-            <div class="box">Taper Fade</div>
-            <div class="box">Same-length Shave</div> */}
           </div>
 
           <div className="slide-container">
@@ -182,6 +148,12 @@ function Services() {
               </div>
             </Slide>
           </div>
+        </div>
+        <div className="services-left-arrow">
+          <div className="triangle" />
+
+          <h4>Check out the list of the hairstyles I can do below!</h4>
+          <div className="triangle" />
         </div>
         <div class="wrapper">
           <ul>

@@ -3,6 +3,7 @@ import logo from "./img/newlogo.png";
 import { HashLink as Link } from "react-router-hash-link";
 import CuratorWidget from "./CuratorWidget";
 import React, { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import Footer from "./Footer";
 
@@ -15,18 +16,23 @@ function importAll(r) {
 }
 
 function GalleryPage() {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [color, setColor] = useState(false);
 
   const changeColorAndLogo = () => {
+    var navMenu = document.getElementById("navMenu");
+
     var Logo = document.getElementById("Logo");
     if (window.scrollY >= 120) {
       setColor(true);
       Logo.style.width = "115px";
       Logo.style.height = "90px";
+      navMenu.style.top = "114px";
     } else {
       setColor(false);
       Logo.style.width = "160px";
       Logo.style.height = "135px";
+      navMenu.style.top = "159px";
     }
   };
   window.addEventListener("scroll", changeColorAndLogo);
@@ -45,7 +51,10 @@ function GalleryPage() {
                 <img src={logo} alt="" id="Logo" />
               </Link>
             </a>
-            <div className="nav-right">
+            <div
+              className={isNavExpanded ? "nav-right expanded " : "nav-right"}
+              id="navMenu"
+            >
               <a>
                 <Link smooth to="/">
                   Home
@@ -83,6 +92,12 @@ function GalleryPage() {
                 </Link>
               </a>
             </div>
+
+            <MenuIcon
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            />
           </div>
         </nav>
         <h1>GALLERY</h1>
